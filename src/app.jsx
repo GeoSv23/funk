@@ -2,20 +2,234 @@ import { useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
+import "./style.scss"
 
 export function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://preactjs.com" target="_blank">
-          <img src={preactLogo} class="logo preact" alt="Preact logo" />
-        </a>
-      </div>
+      <div class="container">
+      <section class="first_section">
+        <header class="header">
+          <div class="header__info">
+            <a class="header__a" href="#">по умолчанию</a>
+            <a class="header__a" href="#">по умолчанию</a>
+            <a class="header__a" href="#">по умолчанию</a>
+          </div>
+          <div class="header__image">
+            <img src="/public/images/OJJO.png" alt="ojjo" />
+          </div>
+          <div class="header__nav">
+            <a href="https://www.google.ru/">
+              <img src="/public/icons/gridicons_search.png" alt="" />
+            </a>
+            <a class="header__a" href="#">по умолчанию</a>
+            <a class="header__a" href="#">по умолчанию</a>
+            <a href="https://www.google.ru/">
+              <img src="/public/icons/user.png" alt="" />
+            </a>
+            <a href="https://www.google.ru/">
+              <img src="/public/icons/hart.png" alt="" />
+            </a>
+          </div>
+        </header>
+        <div class="catalog">
+          <div class="catalog__title">
+            <h1>Долго, дорого, красиво</h1>
+          </div>
+
+          <a a href="catalog_new.html" class="catalog__button_first">Каталог</a
+          >
+        </div>
+        <div class="catalog__brands">
+          <div class="catalog__brands_img">
+            <img src="/public/images/Rectangle 2.png" alt="brand" />
+
+            <img src="/public/images/Rectangle 2.png" alt="brand" />
+
+            <img src="/public/images/Rectangle 2.png" alt="brand" />
+          </div>
+          <div class="catalog__brands_img">
+            <img src="/public/images/Rectangle 2.png" alt="brand" />
+
+            <img src="/public/images/Rectangle 2.png" alt="brand" />
+
+            <img src="/public/images/Rectangle 2.png" alt="brand" />
+          </div>
+        </div>
+      </section>
+      <section class="product">
+        <div class="product__desc">
+          <p class="product__desc-">К мероприятиям</p>
+          <h2>Настоящая красота здесь</h2>
+        </div>
+        <div class="product__buttons">
+          <button>по умолчанию</button>
+          <button>по умолчанию</button>
+          <button>по умолчанию</button>
+          <button>по умолчанию</button>
+          <button>по умолчанию</button>
+          <button>по умолчанию</button>
+        </div>
+        <div class="product__images">
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (2).png" alt="" />
+          </a>
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (3).png" alt="" />
+          </a>
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (4).png" alt="" />
+          </a>
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (5).png" alt="" />
+          </a>
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (6).png" alt="" />
+          </a>
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5.png" alt="" />
+          </a>
+        </div>
+      </section>
+      <section class="ourSaloon distribution">
+        <p class="ourSaloon__p">Не знаете что выбрать?</p>
+        <h1 class="ourSaloonh1">Посетите наши салоны в Москве</h1>
+        <p class="ourSaloon__desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+          quibusdam cum iste. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Dolore nostrum odit inventore ad! Tenetur modi nam
+          officiis cum animi explicabo odit consequatur inventore labore.
+          Ducimus, et. Ullam et distinctio earum.
+        </p>
+        <a class="ourSaloon__button" href="#">наши салоны</a>
+      </section>
+      <section class="product">
+        <div class="product__desc">
+          <p>Полезные статьи</p>
+          <h2>Лучшие советы по подбору дорогих подарков</h2>
+        </div>
+        <div class="product__images">
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (1).png" alt="" />
+          </a>
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (7).png" alt="" />
+          </a>
+          <a class="product__images_container" href="">
+            <img src="public/images/Rectangle 5 (8).png" alt="" />
+          </a>
+        </div>
+        <a class="product__button" href="#">Читать наш блог</a>
+      </section>
+      <section class="socialMedias">
+        <div class="socialMedias__desc">
+          <p>#ojjo_jewerly</p>
+          <h2>Мы в социальных сетях</h2>
+        </div>
+        <div class="socialMedias__images">
+          <a class="socialMedias__images_container" href="">
+            <img src="public/images/img--hover.png" alt="" />
+          </a>
+          <a class="socialMedias__images_container" href="">
+            <img src="public/images/gallery__image.png" alt="" />
+          </a>
+          <a class="socialMedias__images_container" href="">
+            <img src="public/images/gallery__image (1).png" alt="" />
+          </a>
+          <a class="socialMedias__images_container" href="">
+            <img src="public/images/gallery__image (2).png" alt="" />
+          </a>
+          <a class="socialMedias__images_container" href="">
+            <img src="public/images/gallery__image (3).png" alt="" />
+          </a>
+          <a class="socialMedias__images_container" href="">
+            <img src="public/images/Rectangle 8.png" alt="" />
+          </a>
+        </div>
+      </section>
+      <section class="distribution">
+        <p class="distribution__p">
+          Полезные советы и персональный предложения
+        </p>
+        <h1 class="distribution__h1">Эксклюзивная рассылка</h1>
+        <div class="distribution__form">
+          <ul class="distribution__form_list">
+            <li><a href="">Личный менеджер</a></li>
+            <li><a href="">Доставка и оформление</a></li>
+            <li><a href="">Индивидуальный дизайн</a></li>
+          </ul>
+          <form class="distribution__form_board" action="#" method="get">
+            <div class="distribution__form_contain">
+              <input placeholder="ВАШ E-BAIL" type="text" />
+              <button class="distribution__form_button">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__contacts">
+          <div class="footer__contacts-column">
+            <ul class="footer__contacts-ul">
+              <h1>Полезные ссылки</h1>
+              <li>Доставка</li>
+              <li>Оплата</li>
+              <li>Акции</li>
+              <li>Политика конфидециальности</li>
+            </ul>
+          </div>
+          <div class="footer__contacts-column">
+            <ul class="footer__contacts-ul">
+              <h1>Оплата</h1>
+              <li>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt officiis voluptates nesciunt.
+              </li>
+              <li>
+                <img src="public/icons/Rectangle 13.png" alt="" /><img
+                  src="public/icons/Rectangle 14.png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts-column">
+            <ul class="footer__contacts-ul">
+              <h1>Контакты</h1>
+              <li>8 (812) 234-56-55</li>
+              <li>8 (812) 234-56-55</li>
+              <li>ojjo@ojjo.ru</li>
+            </ul>
+          </div>
+          <div class="footer__contacts-column">
+            <ul class="footer__contacts-ul">
+              <h1>Социальные сети</h1>
+              <li>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam,
+                iste!
+              </li>
+              <li>
+                <img src="public/icons/Vector (21).png" alt="" /><img
+                  src="public/icons/Vector (22).png"
+                  alt=""
+                />
+                <img src="public/icons/Vector (23).png" alt="" /><img
+                  src="public/icons/Vector (24).png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__rights">
+          <p class="footer__rights-p">(c) 2020 OJJO jewelry</p>
+          <p class="footer__rights-p">Договор публичной офферты</p>
+          <p class="footer__rights-p">Контрагентам</p>
+          <p class="footer__rights-p">Сделано Figma.info</p>
+        </div>
+      </footer>
+    </div>
       <h1>Vite + Preact</h1>
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>

@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './app.css'
 import "./style.scss"
 
+
+
 export function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div class="container">
+      {/* <div class="container">
       <section class="first_section">
         <header class="header">
           <div class="header__info">
@@ -18,7 +20,7 @@ export function App() {
             <a class="header__a" href="#">по умолчанию</a>
           </div>
           <div class="header__image">
-            <img src="/public/images/OJJO.png" alt="ojjo" />
+            <img src="../public/images/OJJO.png" alt="ojjo" />
           </div>
           <div class="header__nav">
             <a href="https://www.google.ru/">
@@ -74,13 +76,13 @@ export function App() {
         </div>
         <div class="product__images">
           <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (2).png" alt="" />
+            <img src="../public/images/Rectangle 5 (3).png"  alt="" />
           </a>
           <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (3).png" alt="" />
+            <img src="../public/images/Rectangle 5 (3).png" alt="" />
           </a>
           <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (4).png" alt="" />
+            <img src="../public/images/Rectangle 5 (4).png" alt="" />
           </a>
           <a class="product__images_container" href="">
             <img src="public/images/Rectangle 5 (5).png" alt="" />
@@ -229,8 +231,8 @@ export function App() {
           <p class="footer__rights-p">Сделано Figma.info</p>
         </div>
       </footer>
-    </div>
-      <h1>Vite + Preact</h1>
+    </div> */}
+      {/* <h1>Vite + Preact</h1>
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -238,10 +240,10 @@ export function App() {
         <p>
           Edit <code>src/app.jsx</code> and save to test HMR
         </p>
-      </div>
-      <p class="read-the-docs">
+      </div> */}
+      {/* <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }

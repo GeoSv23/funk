@@ -166,6 +166,9 @@ $light: #fff;
     line-height: normal;
   }
 @media screen and (max-width: 766px) {
+    .catalog__title {
+      font-size: 10px;
+    }
     .catalog {
         margin-bottom: 80px;
     }

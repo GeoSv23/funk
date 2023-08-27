@@ -45,6 +45,14 @@ $light: #fff;
 // Подключение шрифтов
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Poiret+One&family=Poppins:wght@100&display=swap");
 
+.body {
+  margin: 0;
+  /* display:flex; */
+  /* place-items:center; */
+  min-width: 320px;
+  min-height: 100vh
+}
+
 .container {
   font-family: "Playfair Display";
   font-weight: 700;

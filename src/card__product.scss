@@ -296,7 +296,9 @@ margin: 20px 0px;
 }
 
 @include breakPointMedium {
-display: contents;
+  .product__buying {
+    display: contents;
+  }
 }
 
 .product__buying-buy {

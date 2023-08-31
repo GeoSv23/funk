@@ -288,12 +288,23 @@ margin-bottom: 40px;
 
 @include breakPointMedium {
   .product__buttons {
+    display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px
+  }
+}
+
+@include breakPointSmall {
+  .product__buttons {
     margin: 0px auto 40px;
     justify-content: center;
     
     
   }
 }
+
+
 
 .product__buttons button {
   @include buttonStyle;

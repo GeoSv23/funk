@@ -1,8 +1,11 @@
+// Импорт стилей других станиц
 @import url(nullstyle.scss);
 @import url(catalogStyle.scss);
 @import url(card__product.scss);
 @import url(map.scss);
 
+
+// Миксины для брейкпоинтов
 @mixin breakPointSmall {
   @media screen and (max-width: 576px) {
     @content;
@@ -27,21 +30,49 @@
   }
 }
 
+// переменные для цветов
+$dark: #333;
+$light: #fff;
+
+// миксины для подзаголовков
+@mixin pretitle {
+  color: $dark;
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+// миксины для заголовков
+@mixin title {
+  color: $dark;
+  text-align: center;
+  font-family: Noto Serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+
+
+// миксин для основного и ховер стиля кнопок
 @mixin buttonStyle {
   text-align: center;
   padding: 10px 20px;
-  color: #fff;
-  border: 1px solid white;
+  color: $light;
+  border: 1px solid $light;
   background-color: #3a3939;
-font-family: Gilroy;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.9px;
-text-transform: uppercase;
-
-  
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
 }
 
 @mixin buttonoStyleHover {
@@ -51,7 +82,7 @@ text-transform: uppercase;
   color: $dark;
   transition: 0.5s;
 
-  color: var(--accent, #333);
+  color: var(--accent, $dark);
   text-align: center;
   font-family: Gilroy;
   font-size: 18px;
@@ -62,26 +93,15 @@ text-transform: uppercase;
   
 }
 
-$dark: #333;
-$light: #fff;
-
-
-// 576
-// 768
-// 992
-// 1200
-// 1400
-
-
 // Подключение шрифтов
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Poiret+One&family=Poppins:wght@100&display=swap");
 
 .body {
   margin: 0;
-  /* display:flex; */
-  /* place-items:center; */
   min-width: 320px;
-  min-height: 100vh
+  min-height: 100vh;
+
 }
 
 .container {
@@ -95,19 +115,12 @@ $light: #fff;
   align-items: center;
 }
 
-// @media screen and (min-width: 1400px) {
-//     .container {
-//         background-color:gray;
-//     }
-// }
-
-
 .header {
   display: flex;
   justify-content: center;
   padding: 20px 0px;
   margin-bottom: 200px;
-  
+
   .header__info {
     display: flex;
     padding: 0px 20px;
@@ -138,11 +151,12 @@ $light: #fff;
 
 .header__a:visited {
   color: $light;
-  background-color: #333;
+  background-color: $dark;
 }
 
+// скрытие навигации в хэдэре
 @media screen and (max-width: 1100px) {
-    .header .header__info {
+    .header__info {
     display: none;
     }
 
@@ -159,6 +173,7 @@ $light: #fff;
     }
 }
 
+// стиль первого блока
 .first_section {
   width: 100%;
   height: 676px;
@@ -171,7 +186,7 @@ $light: #fff;
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 768px) {
+@include breakPointMedium {
   .first_section {
     width: 100%;
     height: 676px;
@@ -197,7 +212,8 @@ $light: #fff;
     font-weight: 700;
     line-height: normal;
   }
-@media screen and (max-width: 766px) {
+
+@include breakPointMedium {
 
     .catalog {
         margin-bottom: 80px;
@@ -209,30 +225,42 @@ $light: #fff;
       font-size: 30px
     }
 }
-  .catalog__button_first {
-    @include buttonStyle;
-    
+
+// стилизация кнопки "каталог изделий"
+.catalog__button_first {
+  @include buttonStyle;
+
   }
 
-  .catalog__button_first:hover {
-    @include buttonoStyleHover;
-  }
+.catalog__button_first:hover {
+  @include buttonoStyleHover;
+}
+
 }
 
 
-
+// стилизация изображений с брендами в первом блоке
 .catalog__brands {
   display: flex;
   justify-content: center;
-  border-top: 2px solid black;
   padding: 20px;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 766px) {
+
+// скытие изображений с брендами в первом блоке на всех экранах менее 766px
+@include breakPointMedium {
   .catalog__brands {
     display: none;
   }
 }
+
+// граница над изображениями с брендами на всех экранах менее 1200px
+@include breakPointBigest {
+  .catalog__brands {
+    border-top: 2px solid black;
+  }
+}
+
 .catalog__brands_img {
   display: flex;
 }
@@ -243,26 +271,11 @@ $light: #fff;
 }
 
 .product__desc_pretitle {
-  color: var(--accent, #333);
-  text-align: center;
-  /* p / 21r */
-  font-family: Gilroy;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
+  @include pretitle
 }
 
 .product__desc_title {
-  color: var(--accent, #333);
-text-align: center;
-/* p-heading / 30b */
-font-family: Noto Serif;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 40px;
+  @include title
 }
 
 .product {
@@ -275,18 +288,15 @@ margin-bottom: 40px;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 30px
-  // & button {
-  //   background-color: aliceblue;
-  //   color: $dark;
-  //   border: 0.7px solid black;
-  //   margin: 10px;
-  //   padding: 2px;
-  //   flex-grow: 1;
-  //   box-shadow: 6px 4px 0px palegoldenrod;
-  // }
 }
 
+.product__button {
+  @include buttonStyle
+}
 
+.product__button:hover {
+  @include buttonoStyleHover
+}
 
 
 .product__buttons button {
@@ -300,10 +310,6 @@ margin-bottom: 40px;
 
 }
 
-.product__button {
-  @include buttonStyle;
- 
-}
 .product__button:hover {
   @include buttonoStyleHover;
 } 
@@ -311,9 +317,9 @@ margin-bottom: 40px;
 @include breakPointMedium {
   .product__buttons {
     display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 30px
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px
   }
 }
 
@@ -325,7 +331,7 @@ margin-bottom: 40px;
     
   }
   .product__buttons button {
-    width: 300px;
+    width: 90%;
   }
 }
 
@@ -370,11 +376,14 @@ margin-bottom: 40px;
     text-align: center;
     margin-bottom: 40px;
   & .ourSaloon__p {
-    margin: 40px;
+    @include pretitle;
+    color: $light;
+    
   }
 
   & .ourSaloon__h1 {
-    margin-bottom: 60px;
+    @include title;
+    color: $light;
   }
 
   }
@@ -405,7 +414,7 @@ margin-bottom: 40px;
     align-items: center;
     margin-bottom: 40px;
     max-width: 1120px;
-    // justify-content: center;
+
 }
 
 .socialMedias__desc {
@@ -440,21 +449,13 @@ margin-bottom: 40px;
     text-align: center;
     margin-bottom: 40px;
     .distribution__p {
-        font-family: Gilroy;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-        margin: 20px;
+      @include pretitle;
+      color: $light
     }
 
     .distribution__h1 {
-        margin-bottom: 60px;
-        font-family: Gilroy;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 140%; /* 25.2px */
+        @include title;
+        color: $light;
     }
 }
 
@@ -487,10 +488,10 @@ margin-bottom: 40px;
 
 .distribution__form_list li{
     font-family: Gilroy;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
     margin-bottom: 10px;
     background: url(../../public/icons/subscribe__icon.png) left no-repeat;
     padding: 0 0 0 30px;
@@ -546,19 +547,19 @@ line-height: 140%;
     flex-direction: column;
     align-items: center;
     font-family: Gilroy;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%
 }
 
 .footer__contacts {
   gap: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    border-bottom: 1px solid $dark;
-    width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $dark;
+  width: 80%;
 
 }
 

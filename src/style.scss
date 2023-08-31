@@ -205,6 +205,9 @@ $light: #fff;
     .catalog__button_first {
         margin-bottom: 100px;
     }
+    .catalog__title {
+      font-size: 30px
+    }
 }
   .catalog__button_first {
     @include buttonStyle;
@@ -215,6 +218,8 @@ $light: #fff;
     @include buttonoStyleHover;
   }
 }
+
+
 
 .catalog__brands {
   display: flex;

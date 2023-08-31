@@ -106,6 +106,7 @@ $light: #fff;
   display: flex;
   justify-content: center;
   padding: 20px 0px;
+  margin-bottom: 200px;
   
   .header__info {
     display: flex;
@@ -197,9 +198,7 @@ $light: #fff;
     line-height: normal;
   }
 @media screen and (max-width: 766px) {
-    .catalog__title {
-      font-size: 10px;
-    }
+
     .catalog {
         margin-bottom: 80px;
     }
@@ -234,21 +233,31 @@ $light: #fff;
 }
 
 .product {
-  width: 80%;
+  max-width: 1100px;
   margin-bottom: 50px;
 }
 
-.product__desc {
+.product__desc_pretitle {
+  color: var(--accent, #333);
   text-align: center;
-  font-size: medium;
-  margin-bottom: 20px;
-  & p {
-    font-size: small;
-    margin-bottom: 40px;
-  }
-  & h2 {
-    font-size: larger;
-  }
+  /* p / 21r */
+  font-family: Gilroy;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.product__desc_title {
+  color: var(--accent, #333);
+text-align: center;
+/* p-heading / 30b */
+font-family: Noto Serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 40px;
 }
 
 .product {
@@ -260,6 +269,7 @@ $light: #fff;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 30px
   // & button {
   //   background-color: aliceblue;
   //   color: $dark;
@@ -271,15 +281,33 @@ $light: #fff;
   // }
 }
 
-.product__button {
+@include breakPointMedium {
+  .product__buttons {
+    margin: 0px auto 40px;
+    justify-content: center;
+    width: 500px;
+    
+  }
+}
+
+.product__buttons button {
   @include buttonStyle;
   color: $light;
   background-color: $dark;
+  width: 150px;
   &:hover {
       @include buttonoStyleHover;
   }
 
 }
+
+.product__button {
+  @include buttonStyle;
+ 
+}
+.product__button:hover {
+  @include buttonoStyleHover;
+} 
 
 .product__images {
   display: flex;
@@ -306,13 +334,8 @@ $light: #fff;
 @media screen and (max-width:768px) {
     .product__images_container {
         position: sticky;
-        top: 120px;
+        top: 10px;
     }
-    .product__buttons {
-        position: sticky;
-        top: 40px;
-    }
-    
 }
 
 .ourSaloon {   
@@ -360,6 +383,7 @@ $light: #fff;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    max-width: 1120px;
     // justify-content: center;
 }
 
@@ -377,7 +401,7 @@ $light: #fff;
 
 @media screen and (max-width: 992px) {
     .socialMedias {
-    max-width: 100%;
+    width: 80%;
     overflow: hidden;
 }
 }
@@ -424,6 +448,7 @@ $light: #fff;
     .distribution {
         flex-direction: column;
         height: 100%;
+        padding: 0px 40px;
         
     }
     .distribution__form {
@@ -473,6 +498,11 @@ line-height: 140%;
     
 }
 
+.distribution__form_contain input {
+  width: 180px;
+  height: 50px;
+}
+
 @media screen and (max-width: 769px) {
     .distribution__form_contain {
         display: block;
@@ -481,16 +511,11 @@ line-height: 140%;
 
 .distribution__form_button {
     @include buttonStyle;
-    font-family: Gilroy;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
+    padding: 14px 35px;
    
     &:hover {
         @include buttonoStyleHover;
+        padding: 14px 35px;
     }
 }
 
@@ -506,6 +531,7 @@ line-height: 150%
 }
 
 .footer__contacts {
+  gap: 20px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -515,7 +541,7 @@ line-height: 150%
 }
 
 .footer__contacts-column {
-    max-width: 25%;
+    width: 25%;
 }
 
 .footer__contacts-ul h1 {
@@ -527,14 +553,18 @@ line-height: 150%
     line-height: 40px;
 }
 
-@media screen and (max-width: 992px) {
+@include breakPointMedium {
+    .footer {
+      width: 100%;
+    }
     .footer__contacts {
         display: block;
         text-align: center;
+        width: 100%;
     }
 
     .footer__contacts-column {
-        max-width: 100%;
+        width: 100%;
     }
 
     .footer__contacts-ul h1 {

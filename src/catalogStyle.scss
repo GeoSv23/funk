@@ -125,6 +125,22 @@ $light: #fff;
   }
 }
 
+.header a:link {
+  font-family: Gilroy;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; 
+  color: $light;
+}
+
+.header a:hover {
+  color: $light;
+  text-shadow: 0px 0px 12px white;
+}
+
+
+
 .wrapper {
   width: 60%;
   display: flex;

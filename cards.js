@@ -51,11 +51,11 @@ const artImgHolder = document.querySelector('.usefoolArticles__images');
 const artCards = [
   {artLink : '1', artImgSrc : 'public/images/Rectangle 5 (1).png', artAlt : '#', title : 'Как выбрать<br/> часы для своей<br/> будущей жены'},
   {artLink : '2', artImgSrc : 'public/images/Rectangle 5 (7).png', artAlt : '#', title : 'Запонки для мужа:<br/> 7 ключевых правил<br/> покупки аксессуара'},
-  {artLink : '3', artImgSrc : 'public/images/Rectangle 5 (8).png', artAlt : '#', title : 'Как выбрать<br/> обручальные кольца<br/> молодоженам'},
+  {artLink : '3', artImgSrc : 'public/images/Rectangle 5 (8).png', artAlt : '#', title : 'Как выбрать обручальные кольца молодоженам'},
 
 ]
 
-artCards.forEach(item => {
+artCards.forEach((item) => {
   const newArtCard = `
     <a class="usefoolArticles__images_container" href="${item.artLink}">
       <img class='usefoolArticles__images-image' src="${item.artImgSrc}" alt="${item.artAlt}" />
@@ -63,30 +63,8 @@ artCards.forEach(item => {
     </a>`;
 
   artImgHolder.innerHTML += newArtCard;
-
+  
 });
-
-
-
-{/* <a class="product__images_container" href="#">
-            <img src="public/images/Rectangle 5 (3).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (3).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (4).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (5).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (6).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5.png" alt="" />
-          </a> */}
-
 
           
           

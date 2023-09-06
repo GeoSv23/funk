@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/public/icons/pngwing.com (1).png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="src/scss/style.scss" />
-
-    <title>Machine Gun Funk</title>
+    <link rel="stylesheet" type="text/css" href="src/style.scss" />
+    <title>OJJO</title>
   </head>
   <body>
     <div class="container">
@@ -18,22 +21,38 @@
             <a class="header__a" href="#">по умолчанию</a>
           </div>
           <div class="header__image">
-            <img src="public/images/OJJO.png" alt="ojjo" />
+            <img src="public/images/OJJO.svg" alt="ojjo" />
           </div>
           <div class="header__nav">
             <a href="https://www.google.ru/">
-              <img src="/public/icons/gridicons_search.png" alt="" />
+              <img src="/public/icons/gridicons_search.svg" alt="" />
             </a>
             <a class="header__a" href="#">по умолчанию</a>
             <a class="header__a" href="#">по умолчанию</a>
             <a href="https://www.google.ru/">
-              <img src="/public/icons/user.png" alt="" />
+              <img src="/public/icons/user.svg" alt="" />
             </a>
             <a href="https://www.google.ru/">
-              <img src="/public/icons/hart.png" alt="" />
+              <img src="/public/icons/like.svg" alt="" />
             </a>
           </div>
-          <div class="burger">-</div>
+          <!-- <div class="menu__icon">
+            <span></span>
+          </div>
+          <div class="menu__body">
+            <ul class="burger__active_nav">
+              <li class="burger__active_item">по умолчанию</li>
+              <li class="burger__active_item">по умолчанию</li>
+              <li class="burger__active_item">по умолчанию</li>
+              <li class="burger__active_item">по умолчанию</li>
+              <li class="burger__active_item-icons">
+                <img src="/public/icons/user.png" alt="" /><img
+                  src="/public/icons/hart.png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div> -->
         </header>
         <div class="catalog">
           <div class="catalog__title">
@@ -70,32 +89,10 @@
           <h2 class="product__desc_title">Настоящая красота здесь</h2>
         </div>
         <div class="product__buttons">
-          <button>Свадьба</button>
-          <button>Мужу</button>
-          <button>Партнеру</button>
-          <button>Жене</button>
-          <button>Колекции</button>
-          <button>Редкость</button>
+          <!-- js -->
         </div>
         <div class="product__images">
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (3).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (3).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (4).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (5).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (6).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5.png" alt="" />
-          </a>
+          <!-- js -->
         </div>
       </section>
       <section class="ourSaloon distribution">
@@ -112,25 +109,17 @@
           >наши салоны</a
         >
       </section>
-      <section class="product">
-        <div class="product__desc">
-          <p class="product__desc_pretitle">Полезные статьи</p>
-          <h2 class="product__desc_title">
+      <section class="usefoolArticles">
+        <div class="usefoolArticles__desc">
+          <p class="usefoolArticles__desc_pretitle">Полезные статьи</p>
+          <h2 class="usefoolArticles__desc_title">
             Лучшие советы по подбору дорогих подарков
           </h2>
         </div>
-        <div class="product__images">
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (1).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (7).png" alt="" />
-          </a>
-          <a class="product__images_container" href="">
-            <img src="public/images/Rectangle 5 (8).png" alt="" />
-          </a>
+        <div class="usefoolArticles__images">
+          <!-- js -->
         </div>
-        <a class="product__button" href="#">Читать наш блог</a>
+        <a class="usefoolArticles__button" href="#">Читать наш блог</a>
       </section>
       <section class="socialMedias">
         <div class="socialMedias__desc">
@@ -196,10 +185,12 @@
                 Incidunt officiis voluptates nesciunt.
               </li>
               <li>
-                <img src="public/icons/Rectangle 13.png" alt="" /><img
-                  src="public/icons/Rectangle 14.png"
-                  alt=""
-                />
+                <div class="footer__icons">
+                  <img src="public/icons/Rectangle 13.svg" alt="" /><img
+                    src="public/icons/Rectangle 14.svg"
+                    alt=""
+                  />
+                </div>
               </li>
             </ul>
           </div>
@@ -219,14 +210,33 @@
                 iste!
               </li>
               <li>
-                <img src="public/icons/Vector (21).png" alt="" /><img
-                  src="public/icons/Vector (22).png"
-                  alt=""
-                />
-                <img src="public/icons/Vector (23).png" alt="" /><img
-                  src="public/icons/Vector (24).png"
-                  alt=""
-                />
+                <div class="footer__icons">
+                  <img
+                    class="footer__icons-item"
+                    src="public/icons/Vector(20).svg"
+                    alt=""
+                  />
+                  <img
+                    class="footer__icons-item"
+                    src="public/icons/Vector (21).svg"
+                    alt=""
+                  />
+                  <img
+                    class="footer__icons-item"
+                    src="public/icons/Vector (22).svg"
+                    alt=""
+                  />
+                  <img
+                    class="footer__icons-item"
+                    src="public/icons/Vector (23).svg"
+                    alt=""
+                  />
+                  <img
+                    class="footer__icons-item"
+                    src="public/icons/Vector (24).svg"
+                    alt=""
+                  />
+                </div>
               </li>
             </ul>
           </div>
@@ -240,6 +250,7 @@
       </footer>
     </div>
     <div id="app"></div>
+    <script src="cards.js"></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

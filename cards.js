@@ -45,7 +45,7 @@ productCards.forEach(object => {
   productImgHolder.innerHTML += newImage;
 });
 
-// 
+// картинки
 const artImgHolder = document.querySelector('.usefoolArticles__images');
 
 const artCards = [
@@ -63,7 +63,7 @@ artCards.forEach((item) => {
     </a>`;
 
   artImgHolder.innerHTML += newArtCard;
-  
+
 });
 
           
